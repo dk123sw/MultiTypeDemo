@@ -9,8 +9,6 @@ import android.widget.Toast;
 
 import com.wanli.com.multitypedemo.R;
 import com.wanli.com.multitypedemo.api.BaseActivity;
-import com.wanli.com.multitypedemo.api.presenter.IBookListPresenter;
-import com.wanli.com.multitypedemo.api.presenter.impl.BookDetailPreImpl;
 import com.wanli.com.multitypedemo.api.presenter.impl.BookListPreImpl;
 import com.wanli.com.multitypedemo.api.view.IBookListView;
 import com.wanli.com.multitypedemo.bean.BookInfoResponse;
@@ -33,7 +31,8 @@ public class BookListActivity extends BaseActivity implements IBookListView, Swi
 
 
     private String tag = "推荐";
-    private static final String fields = "id,title,subtitle,origin_title,rating,author,translator,publisher,pubdate,summary,images,pages,price,binding,isbn13,series";
+    private static final String fields = "id,title,subtitle,origin_title,rating,author," +
+            "translator,publisher,pubdate,summary,images,pages,price,binding,isbn13,series";
     private static int count = 10;
 
 

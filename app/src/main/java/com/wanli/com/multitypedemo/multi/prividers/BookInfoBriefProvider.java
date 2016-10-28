@@ -15,6 +15,7 @@ import me.drakeet.multitype.ItemViewProvider;
 
 /**
  * Created by wanli on 2016/10/26.
+ * @ 简介
  */
 
 public class BookInfoBriefProvider extends ItemViewProvider<BookInfoResponse.BookInfoResponseBrief,BookInfoBriefProvider.BookBriefHolder> {

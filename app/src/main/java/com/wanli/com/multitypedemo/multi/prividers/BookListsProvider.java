@@ -22,6 +22,7 @@ import me.drakeet.multitype.ItemViewProvider;
 
 /**
  * Created by wanli on 2016/10/25.
+ * @ 主界面布局
  */
 public class BookListsProvider
         extends ItemViewProvider<BookInfoResponse, BookListsProvider.BookListHolder> {

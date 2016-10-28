@@ -23,6 +23,7 @@ import me.drakeet.multitype.ItemViewProvider;
 
 /**
  * Created by wanli on 2016/10/13.
+ * RecyclerView的Item布局
  */
 
 public class BookReviewsListResponseItemViewProvider extends ItemViewProvider<BookReviewResponse, BookReviewsListResponseItemViewProvider.BookCommentHolder> {

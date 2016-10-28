@@ -6,9 +6,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.HorizontalScrollView;
-import android.widget.LinearLayout;
-
 
 import com.wanli.com.multitypedemo.R;
 import com.wanli.com.multitypedemo.adapter.BookSeriesItemAdapter;
@@ -21,6 +18,7 @@ import me.drakeet.multitype.ItemViewProvider;
 
 /**
  * Created by wanli on 2016/10/14.
+ * 描述界面的RecyclerView视图
  */
 
 public class BookSeriesViewProvider extends ItemViewProvider<BookSeriesListResponse, BookSeriesViewProvider.BookSeriesHolder> {

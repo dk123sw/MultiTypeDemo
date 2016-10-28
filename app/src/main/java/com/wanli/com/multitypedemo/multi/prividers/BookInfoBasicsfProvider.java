@@ -24,6 +24,7 @@ import me.drakeet.multitype.ItemViewProvider;
 
 /**
  * Created by wanli on 2016/10/26.
+ * 详细描述界面点击出现的界面
  */
 
 public class BookInfoBasicsfProvider extends ItemViewProvider<BookInfoResponse,BookInfoBasicsfProvider.BookInfoHolder> {

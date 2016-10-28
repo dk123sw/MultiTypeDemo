@@ -3,7 +3,6 @@ package com.wanli.com.multitypedemo.bean;
 
 
 import java.io.Serializable;
-import java.util.List;
 
 import me.drakeet.multitype.Item;
 
@@ -11,9 +10,9 @@ import me.drakeet.multitype.Item;
 /**
  * 基本信息
  */
-public class BookInfoResponse implements Serializable,Item {
-    public BookInfoResponse() {
-
+public class BookInfoResponse implements
+        Serializable,Item {
+            public BookInfoResponse() {
     }
 
     public BookInfoResponse bookInfoResponse;

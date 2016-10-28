@@ -39,7 +39,7 @@ public class BookListPreImpl implements IBookListPresenter, ApiCompleteListener 
     public void onComplected(Object result) {
         iBookDetailsView.hideProgress();
         iBookDetailsView.showData(result);
-    }
+}
 
     @Override
     public void onFailed(BaseResponse msg) {

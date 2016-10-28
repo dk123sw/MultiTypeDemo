@@ -22,7 +22,7 @@ import java.util.List;
 public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.BookListHolder> {
 
     private Context mContext;
-    private  List<BookInfoResponse> bookInfoResponses;
+    private List<BookInfoResponse> bookInfoResponses;
 
     public BookListAdapter(Context context, List<BookInfoResponse> bookInfoResponses) {
         this.mContext = context;

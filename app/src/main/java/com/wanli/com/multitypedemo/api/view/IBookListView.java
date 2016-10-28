@@ -9,9 +9,9 @@ import com.wanli.com.multitypedemo.api.IBaseView;
  * Description:
  */
 public interface IBookListView extends IBaseView {
-    void showMessage(String msg);
+        void showMessage(String msg);
 
-    void showProgress();
+        void showProgress();
 
-    void hideProgress();
-}
+        void hideProgress();
+        }

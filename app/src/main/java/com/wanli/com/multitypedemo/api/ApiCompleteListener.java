@@ -5,8 +5,6 @@ import com.wanli.com.multitypedemo.bean.BaseResponse;
 
 /**
  * 网络请求回调接口
- *
- *
  */
 public interface ApiCompleteListener {
     void onComplected(Object result);
