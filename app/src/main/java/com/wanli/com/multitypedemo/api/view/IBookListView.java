@@ -14,4 +14,4 @@ public interface IBookListView extends IBaseView {
         void showProgress();
 
         void hideProgress();
-        }
+}

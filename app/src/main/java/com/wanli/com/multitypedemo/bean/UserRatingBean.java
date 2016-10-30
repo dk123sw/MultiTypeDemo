@@ -12,6 +12,15 @@ public class UserRatingBean implements Serializable {
     private int max;
     private String value;
     private int min;
+    private int start;
+
+    public int getStart() {
+        return start;
+    }
+
+    public void setStart(int start) {
+        this.start = start;
+    }
 
     public int getMax() {
         return max;
