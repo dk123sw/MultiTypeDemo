@@ -11,7 +11,7 @@ import me.drakeet.multitype.Item;
 public class MovieListResponse implements Serializable,Item {
 
     public static final long serialVersionUID = 7060254125600464481L;
-//    public static final String serialVersionName = "movieList";
+    public static final String serialVersionName = "movieList";
 
     private ImageBean images;
     private String genres[];
@@ -31,9 +31,9 @@ public class MovieListResponse implements Serializable,Item {
         return serialVersionUID;
     }
 
-//    public static String getSerialVersionName() {
-//        return serialVersionName;
-//    }
+    public static String getSerialVersionName() {
+        return serialVersionName;
+    }
 
     public String[] getGenres() {
         return genres;

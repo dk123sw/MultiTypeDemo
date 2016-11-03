@@ -1,5 +1,6 @@
 package com.wanli.com.multitypedemo.multi.prividers;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.AppCompatRatingBar;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +12,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.wanli.com.multitypedemo.R;
+import com.wanli.com.multitypedemo.WebActivity;
+import com.wanli.com.multitypedemo.api.http.URL;
 import com.wanli.com.multitypedemo.bean.MovieListResponse;
 
 import me.drakeet.multitype.ItemViewProvider;
@@ -30,7 +33,7 @@ public class MovieListProvider extends
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull MovieListHolder holder, @NonNull MovieListResponse movieList) {
+    protected void onBindViewHolder(@NonNull final MovieListHolder holder, @NonNull final MovieListResponse movieList) {
         Glide.with(holder.itemView.getContext())
                 .load(movieList.getImages().getLarge())
                 .into(holder.iv_book_img);
@@ -39,6 +42,18 @@ public class MovieListProvider extends
         holder.tv_hots_num.setText(movieList.getRating().getAverage());
         holder.tv_book_info.setText(movieList.getOriginal_title());
         holder.tv_book_description.setText("\u3000" + movieList.getYear());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = (String)URL.URL_MOVIE + movieList.getId() + "/";
+//                Bundle bundle = new Bundle();
+//                bundle.putSerializable(MovieListResponse.serialVersionName ,movieList );
+                Intent intent = WebActivity.newIntent(holder.itemView.getContext()
+                 , url , movieList.getTitle());
+//                intent.putExtras(bundle);
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });
     }
 
     public static class MovieListHolder extends RecyclerView.ViewHolder {

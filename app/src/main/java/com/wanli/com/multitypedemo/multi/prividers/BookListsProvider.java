@@ -1,5 +1,8 @@
 package com.wanli.com.multitypedemo.multi.prividers;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.AppCompatRatingBar;
 import android.support.v7.widget.RecyclerView;
@@ -10,7 +13,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.GlideBitmapDrawable;
 import com.wanli.com.multitypedemo.R;
+import com.wanli.com.multitypedemo.api.view.impl.BookDetailsActivity;
 import com.wanli.com.multitypedemo.bean.BookInfoResponse;
 
 import me.drakeet.multitype.ItemViewProvider;
@@ -39,33 +44,33 @@ public class BookListsProvider
         holder.tv_hots_num.setText(bookInfo.getRating().getAverage());
         holder.tv_book_info.setText(bookInfo.getInfoString());
         holder.tv_book_description.setText("\u3000" + bookInfo.getSummary());
-//        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Bundle b = new Bundle();
-//                b.putSerializable(BookInfoResponse.serialVersionName, bookInfo);
-//                Bitmap bitmap;
-//                GlideBitmapDrawable imageDrawable = (GlideBitmapDrawable) holder.iv_book_img.getDrawable();
-//                if (imageDrawable != null) {
-//                    bitmap = imageDrawable.getBitmap();
-//                    b.putParcelable("book_img", bitmap);
-//                }
-//                Intent intent = new Intent(holder.itemView.getContext(), BookDetailsActivity.class);
-//                intent.putExtras(b);
-////                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-////                    if (BaseActivity.activity == null) {
-////                        UIUtils.startActivity(intent);
-////                        return;
-////                    }
-//////                    ActivityOptionsCompat options = ActivityOptionsCompat.
-//////                            makeSceneTransitionAnimation(BaseActivity.activity, holder.iv_book_img, "book_img");
-//////                    BaseActivity.activity.startActivity(intent, options.toBundle());
-////                } else {
-////                    UIUtils.startActivity(intent);
-//                //}
-//                holder.itemView.getContext().startActivity(intent);
-//            }
-//        });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle b = new Bundle();
+                b.putSerializable(BookInfoResponse.serialVersionName, bookInfo);
+                Bitmap bitmap;
+                GlideBitmapDrawable imageDrawable = (GlideBitmapDrawable) holder.iv_book_img.getDrawable();
+                if (imageDrawable != null) {
+                    bitmap = imageDrawable.getBitmap();
+                    b.putParcelable("book_img", bitmap);
+                }
+                Intent intent = new Intent(holder.itemView.getContext(), BookDetailsActivity.class);
+                intent.putExtras(b);
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//                    if (BaseActivity.activity == null) {
+//                        UIUtils.startActivity(intent);
+//                        return;
+//                    }
+////                    ActivityOptionsCompat options = ActivityOptionsCompat.
+////                            makeSceneTransitionAnimation(BaseActivity.activity, holder.iv_book_img, "book_img");
+////                    BaseActivity.activity.startActivity(intent, options.toBundle());
+//                } else {
+//                    UIUtils.startActivity(intent);
+                //}
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });
 
     }
 

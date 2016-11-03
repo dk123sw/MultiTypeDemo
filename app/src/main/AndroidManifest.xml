@@ -18,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".api.view.impl.BookDetailsActivity" />
-        <activity android:name=".api.view.impl.BookListActivity"></activity>
+        <activity android:name=".api.view.impl.BookListActivity" />
+        <activity android:name=".WebActivity"></activity>
     </application>
 
 </manifest>
